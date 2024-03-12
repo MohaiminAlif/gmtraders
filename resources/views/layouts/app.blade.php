@@ -7,14 +7,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ 'GM Traders' }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Style -->
-    <link rel="stylesheet" href="{{ asset('sass/app.scss') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('sass/app.scss') }}"> -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
@@ -24,11 +25,13 @@
 
 </head>
 <body>
+   {{--
+    
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ 'GM Traders' }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -83,5 +86,34 @@
             @yield('content')
         </main>
     </div>
+
+    --}}
+
+
+    <div class="tilt-container">
+        <div class="tilt-element" id="tilt-element">
+           
+            <h1 class="text-midddle text-black">GM Traders</h1>
+            <p class="text-midddle text-black">We bring you the best quality bags</p>
+    
+            <button class="login-button" onclick="expandElement()">Log In</button>
+            @if (Route::has('register'))          
+                    
+                    <a href="{{ route('register') }}"><button class="signup-button">{{ __('Register') }}</button></a>
+             
+            @endif
+            
+            <!-- <button class="signup-button" onclick="expandElement2()">Sign Up</button> -->
+
+            
+            
+        </div>
+
+       
+    </div>
+
+    <main class="py-4">
+            @yield('content')
+        </main>
 </body>
 </html>
