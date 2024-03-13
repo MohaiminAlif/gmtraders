@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,18 +11,16 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <!-- Style -->
-    <!-- <link rel="stylesheet" href="{{ asset('sass/app.scss') }}"> -->
+    
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+   
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+   
 </head>
 <body>
    {{--
@@ -112,8 +110,23 @@
        
     </div>
 
-    <main class="py-4">
-            @yield('content')
-        </main>
+    
 </body>
+
+<script>
+    const tiltElement = document.getElementById('tilt-element');
+
+    document.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth / 2 - e.pageX) / -80;
+        const y = (window.innerHeight / 2 - e.pageY) / 80;
+
+        tiltElement.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+    });
+
+    // Reset the tilt when the mouse leaves the element
+    tiltElement.addEventListener('mouseleave', () => {
+        tiltElement.style.transform = 'rotateX(0) rotateY(0)';
+    });
+
+</script>
 </html>
