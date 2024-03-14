@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- CSRF token meta tag -->
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,6 +21,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    
    
 </head>
 <body>
@@ -95,9 +97,11 @@
             <p class="text-midddle text-black">We bring you the best quality bags</p>
     
             <button class="login-button" onclick="expandElement()">Log In</button>
+            
+            
             @if (Route::has('register'))          
                     
-                    <a href="{{ route('register') }}"><button class="signup-button">{{ __('Register') }}</button></a>
+                <a href="{{ route('register') }}"><button class="signup-button">{{ __('Register') }}</button></a>
              
             @endif
             
@@ -110,15 +114,107 @@
        
     </div>
 
+
+    <form method="POST" action="{{ route('login') }}">
+      
+
+        <div class="row mb-3">
+            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+
+            <div class="col-md-6">
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+
+            </div>
+         </div>
+
+        <div class="row mb-3">
+            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+            <div class="col-md-6">
+                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+
+            </div>
+        </div>
+
+
+
+        <div class="row mb-0">
+             <div class="col-md-8 offset-md-4">
+                   <button type="submit" class="btn btn-primary">
+                      {{ __('Login') }}
+                   </button> 
+
+             </div>
+        </div>
+    </form>
+
+
+    
+
     
 </body>
 
 <script>
+        // Set data attribute to store the route URL
+        document.getElementById('dynamic-form-container').setAttribute('data-route', '{{ route('login') }}');
+        
+        // Call the generateDynamicForm function from dynamic-form.js
+        generateDynamicForm('dynamic-form-container');
+    </script>
+
+<script>
+
+
+//         // Function to get CSRF token from meta tag
+//         function getCsrfToken() {
+//             return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+//         }
+
+       
+//         function expandElement() {
+//         const titleElement = document.getElementById('tilt-element');
+//             titleElement.innerHTML = `
+               
+
+                
+//             <h1 class="text-midddle text-black">GM Traders</h1>
+//             <p class="text-midddle text-black">We bring you the best quality bags</p>
+
+
+//                 <form method="POST" action="{{ route('login') }}">
+//                     <input type="hidden" name="_token" value="${getCsrfToken()}"> <!-- CSRF token input field -->
+//                     <label for="inp" class="inp">
+
+//                     <input type="email" name="email" class="input-field" @error('email') is-invalid @enderror" name="email" placeholder="Email" required autocomplete="email" autofocus>
+
+//                     <input type="password" name="password" class="input-field" placeholder="Password" required>
+
+//                     <input type="submit" class="login" value="Login">
+//                     <p class="cancel-link"><a href="">Back</a></p>
+                
+//                     </label>
+//                 </form>
+
+              
+                
+                
+//             `;
+
+//             const tiltElement = document.getElementById('tilt-element');
+//             tiltElement.style.width = '600px';
+//             tiltElement.style.height = '400px';
+
+
+// }
+
+
     const tiltElement = document.getElementById('tilt-element');
 
     document.addEventListener('mousemove', (e) => {
-        const x = (window.innerWidth / 2 - e.pageX) / -80;
-        const y = (window.innerHeight / 2 - e.pageY) / 80;
+        const x = (window.innerWidth / 2 - e.pageX) / 80;
+        const y = (window.innerHeight / 2 - e.pageY) / 50;
 
         tiltElement.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
     });

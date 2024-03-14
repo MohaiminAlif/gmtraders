@@ -1,5 +1,7 @@
 
-
+function getCsrfToken() {
+    return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+}
 
 function expandElement() {
     const titleElement = document.getElementById('tilt-element');
@@ -12,7 +14,7 @@ function expandElement() {
 
 
                 <form method="POST" action="{{ route('login') }}">
-                    @csrf
+                    <input type="hidden" name="_token" value="${getCsrfToken()}"> <!-- CSRF token input field -->
                     <label for="inp" class="inp">
 
                     <input type="email" name="email" class="input-field" @error('email') is-invalid @enderror" name="email" placeholder="Email" required autocomplete="email" autofocus>
@@ -25,8 +27,7 @@ function expandElement() {
                     </label>
                 </form>
 
-                
-                
+              
                 
                 
             `;
