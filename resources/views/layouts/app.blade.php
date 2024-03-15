@@ -162,9 +162,7 @@
         
         // Call the generateDynamicForm function from dynamic-form.js
         generateDynamicForm('dynamic-form-container');
-    </script>
 
-<script>
 
 
 //         // Function to get CSRF token from meta tag
