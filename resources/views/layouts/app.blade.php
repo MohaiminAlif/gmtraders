@@ -87,7 +87,7 @@
         </main>
     </div>
 
-    --}}
+--}}
 
 
     <div class="tilt-container">
@@ -114,45 +114,6 @@
        
     </div>
 
-
-    <form method="POST" action="{{ route('login') }}">
-      
-
-        <div class="row mb-3">
-            <label for="email" class="col-md-4 col-form-label text-md-end">Email</label>
-
-            <div class="col-md-6">
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-
-            </div>
-         </div>
-
-        <div class="row mb-3">
-            <label for="password" class="col-md-4 col-form-label text-md-end">Password</label>
-
-            <div class="col-md-6">
-                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-
-            </div>
-        </div>
-
-
-
-        <div class="row mb-0">
-             <div class="col-md-8 offset-md-4">
-                   <button type="submit" class="btn btn-primary">
-                      {{ __('Login') }}
-                   </button> 
-
-             </div>
-        </div>
-    </form>
-
-
-    
-
     
 </body>
 
@@ -165,47 +126,47 @@
 
 
 
-//         // Function to get CSRF token from meta tag
-//         function getCsrfToken() {
-//             return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-//         }
+        // Function to get CSRF token from meta tag
+        function getCsrfToken() {
+            return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        }
 
        
-//         function expandElement() {
-//         const titleElement = document.getElementById('tilt-element');
-//             titleElement.innerHTML = `
+        function expandElement() {
+        const titleElement = document.getElementById('tilt-element');
+            titleElement.innerHTML = `
                
 
                 
-//             <h1 class="text-midddle text-black">GM Traders</h1>
-//             <p class="text-midddle text-black">We bring you the best quality bags</p>
+            <h1 class="text-midddle text-black">GM Traders</h1>
+            <p class="text-midddle text-black">We bring you the best quality bags</p>
 
 
-//                 <form method="POST" action="{{ route('login') }}">
-//                     <input type="hidden" name="_token" value="${getCsrfToken()}"> <!-- CSRF token input field -->
-//                     <label for="inp" class="inp">
+                <form method="POST" action="{{ route('login') }}">
+                    <input type="hidden" name="_token" value="${getCsrfToken()}"> <!-- CSRF token input field -->
+                    <label for="inp" class="inp">
 
-//                     <input type="email" name="email" class="input-field" @error('email') is-invalid @enderror" name="email" placeholder="Email" required autocomplete="email" autofocus>
+                    <input type="email" name="email" class="input-field" @error('email') is-invalid @enderror" name="email" placeholder="Email" required autocomplete="email" autofocus>
 
-//                     <input type="password" name="password" class="input-field" placeholder="Password" required>
+                    <input type="password" name="password" class="input-field" placeholder="Password" required>
 
-//                     <input type="submit" class="login" value="Login">
-//                     <p class="cancel-link"><a href="">Back</a></p>
+                    <input type="submit" class="login" value="Login">
+                    <p class="cancel-link"><a href="">Back</a></p>
                 
-//                     </label>
-//                 </form>
+                    </label>
+                </form>
 
               
                 
                 
-//             `;
+            `;
 
-//             const tiltElement = document.getElementById('tilt-element');
-//             tiltElement.style.width = '600px';
-//             tiltElement.style.height = '400px';
+            const tiltElement = document.getElementById('tilt-element');
+            tiltElement.style.width = '600px';
+            tiltElement.style.height = '400px';
 
 
-// }
+}
 
 
     const tiltElement = document.getElementById('tilt-element');
