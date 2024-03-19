@@ -1,4 +1,6 @@
+@extends('header') @section('title', 'GM Traders | Registration') 
 
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -59,8 +61,17 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
+
+                        <div class="row mb-2">
+                            <div class="dropdown offset-md-4">
+                                
+                                <select name="role" class="btn btn-secondary dropdown-toggle">
+                                    <option value="1">Admin</option>
+                                    <option value="2">Employee</option>
+                                
+                                </select>
+                            </div>
+                            <div class="col-md-6 offset-md-10">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
@@ -72,4 +83,6 @@
         </div>
     </div>
 </div>
+
+@endsection
 

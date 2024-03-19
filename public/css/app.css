@@ -52,6 +52,17 @@ body {
     margin: 2rem 0 0rem 0rem;
 }
 
+.logout-button{
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    border-width: 0rem;
+    margin: 2rem 0 0rem 0rem;
+    background-color:#aaaaaa;
+    font-weight: bold;
+    color: red;
+}
+
 .login{
     background-color:#1941c340;
 }
@@ -82,4 +93,8 @@ a{
 .cancel-link{
     margin-left: 30rem;
     font-size: 1rem;
+}
+
+.user{
+    color: black;
 }

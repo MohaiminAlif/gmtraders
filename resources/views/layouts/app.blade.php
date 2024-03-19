@@ -96,16 +96,37 @@
             <h1 class="text-midddle text-black">GM Traders</h1>
             <p class="text-midddle text-black">We bring you the best quality bags</p>
     
-            <button class="login-button" onclick="expandElement()">Log In</button>
             
+
+            @guest
+                @if (Route::has('login'))
+                     <button class="login-button" onclick="expandElement()">Log In</button>
+                     @endif
+
+                     @if (Route::has('register'))
+                         
+                         <a href="{{ route('register') }}"><button class="signup-button">Register</button></a>
+                        
+                    @endif
+                @else
+
+                    <h3 class="user">User: {{ Auth::user()->name }}</h3>
+                              
+
+                
+                    <button class="logout-button"><a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                         {{ __('Logout') }}
+                    </a></button>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+         @endguest
             
-            @if (Route::has('register'))          
-                    
-                <a href="{{ route('register') }}"><button class="signup-button">Register</button></a>
-             
-            @endif
-            
-            <!-- <button class="signup-button" onclick="expandElement2()">Sign Up</button> -->
 
             
             
