@@ -6,8 +6,12 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+// Route::get('/', function () {
+//     return view('layouts/app');
+// });
+
 Route::get('/', function () {
-    return view('layouts/app');
+    return view('website/main');
 });
 
 Route::get('/dashboard', function () {
@@ -25,3 +29,10 @@ require __DIR__.'/auth.php';
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+// Website Route
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

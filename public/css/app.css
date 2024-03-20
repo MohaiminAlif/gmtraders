@@ -60,7 +60,17 @@ body {
     margin: 2rem 0 0rem 0rem;
     background-color:#aaaaaa;
     font-weight: bold;
-    color: red;
+    /* margin: 1rem 0rem 0rem 28rem; */
+
+}
+.dashboard-button{
+    
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    border-width: 0rem;
+    margin: 2rem 0rem 0rem 21rem;
+
 }
 
 .login{
