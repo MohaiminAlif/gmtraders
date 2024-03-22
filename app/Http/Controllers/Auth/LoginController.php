@@ -41,8 +41,8 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        $request->session()->forget('cart');
-        $request->session()->forget('cart_data');
+        $request->session()->forget('');
+        $request->session()->forget('');
         Auth::logout();
         return redirect('/login');
     }
