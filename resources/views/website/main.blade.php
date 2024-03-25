@@ -38,12 +38,15 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <link rel="stylesheet" href="{{ asset('css/main_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    
 
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
+    
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      
 
       <div class="home-container">
         <div class="home-header">
@@ -69,10 +72,7 @@
                   Contact Us
                 </a>
               </nav>
-              <div class="home-buttons">
-                <button class="home-login buttonFlat">Login</button>
-                <button class="buttonFilled">Register</button>
-              </div>
+
             </div>
             <div data-thq="thq-burger-menu" class="home-burger-menu">
               <svg viewBox="0 0 1024 1024" class="home-icon socialIcons">
