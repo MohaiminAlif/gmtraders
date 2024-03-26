@@ -25,4 +25,19 @@ class HomeController extends Controller
     {
         return view('dashboard');
     }
+
+    public function product()
+    {
+        return view('product');
+    }
+
+    public function aboutus()
+    {
+        return view('aboutus');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }
