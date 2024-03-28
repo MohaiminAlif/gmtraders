@@ -57,16 +57,21 @@
             <span class="logo">GM TRADERS</span>
             <div data-thq="thq-navbar-nav" class="home-desktop-menu">
               <nav class="home-links">
-                <a href="index.html" class="home-nav12 bodySmall">Home</a>
+                <a href="{{ route('home') }}" class="home-nav12 bodySmall">Home</a>
                 <a
-                  href="make-an-about-us-page-for-the-gm-traders-where-it-mentioned-how-good-they-make-the-plastic-bags-for-dresses-and-how-good-their-material-is.html"
+                  href="{{ route('aboutus') }}"
                   class="home-nav22 bodySmall"
                 >
                   About Us
                 </a>
-                <span class="home-nav32 bodySmall">Products</span>
                 <a
-                  href="make-a-contact-us-page.html"
+                  href="{{ route('product') }}"
+                  class="home-nav22 bodySmall"
+                >
+                  Product
+                </a>
+                <a
+                  href="{{ route('contact') }}"
                   class="home-nav42 bodySmall"
                 >
                   Contact Us

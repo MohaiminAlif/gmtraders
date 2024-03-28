@@ -33,9 +33,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 // Website Route
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
-Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');
-Route::get('/product', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
+Route::get('/home', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home');
+Route::get('/contact', [App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
+Route::get('/aboutus', [App\Http\Controllers\WebsiteController::class, 'aboutus'])->name('aboutus');
+Route::get('/product', [App\Http\Controllers\WebsiteController::class, 'product'])->name('product');
 
 
