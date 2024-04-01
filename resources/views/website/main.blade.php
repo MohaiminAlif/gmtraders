@@ -471,11 +471,14 @@
             </div>
           </footer>
         </div>
-
+      </div>
+    </div>
     <script
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
 
 
-    @endsection
+    
+
+@endsection
