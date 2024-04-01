@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+  
 <div class="home-header">
           <header
             data-thq="thq-navbar"
@@ -98,6 +99,13 @@
               </div>
             </div>
           </header>
-        </div>
+
+
+        
+        <main class="py-4">
+            @yield('content')
+        </main>
+</div>
+
 </body>
 </html>
