@@ -40,9 +40,9 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+
     <link rel="stylesheet" href="{{ asset('css/main_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    
 
   </head>
 <body>
