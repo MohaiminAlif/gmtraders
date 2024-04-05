@@ -397,16 +397,14 @@
                   </span>
                   <span class="bodySmall">
                     <span>
-                      Yes, GM Traders provides competitive pricing and bulk
-                      discounts for large orders of plastic bags.
+                      
                     </span>
                   </span>
                 </div>
                 <div class="question1-container">
                   <span class="question1-text heading3">
                     <span>
-                      How can I contact GM Traders for inquiries or orders?
-                    </span>
+                      </span>
                   </span>
                   <span class="bodySmall">
                     <span>
