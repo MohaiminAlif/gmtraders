@@ -9,42 +9,10 @@
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
-
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-
     <link rel="stylesheet" href="{{ asset('css/main_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 
-  </head>
+</head>
 <body>
   
 <div class="home-header">
@@ -52,7 +20,7 @@
             data-thq="thq-navbar"
             class="navbarContainer home-navbar-interactive"
           >
-            <span class="logo">G.M. TRADERS</span>
+     
             <div data-thq="thq-navbar-nav" class="home-desktop-menu">
               <nav class="home-links">
                 <a href="{{ route('home') }}" class="home-nav12 bodySmall">Home</a>
