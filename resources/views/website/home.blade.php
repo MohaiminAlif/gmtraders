@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G.M. Traders</title>
-  
-  <style>
+@extends('website.header') @section('title', 'G.M. TRADERS | Home') 
+
+@section('content') 
+
+<style>
 
 body {
   display: flex;
@@ -19,7 +16,6 @@ body {
 #card {
   width: 200px;
   height: 400px;
-  margin-left: 105rem;
   z-index: 2;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -30,37 +26,28 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 
-  animation: move 5s ;
+  animation: move 5s ease-in-out infinite;
   background-clip: padding-box;
 }
 
 h1 {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   font-size: 200px;
   letter-spacing: 15px;
-  color: black;
-  width: 1000px;
-  
-}
-
-h2 {
-  position: absolute;
-  z-index: 4;
-  font-size: 25px;
-  letter-spacing: 12px;
-  color: black;
-  background-color: white;
-  -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: white;
-  
+  color: #fff;
 }
 
 @keyframes move {
   0% {
-    transform: translateX(-110rem);
+    transform: translateX(-200px);
   }
-
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
 }
 
 #rect {
@@ -95,20 +82,34 @@ h2 {
 
 </style>
 
+{{--
+
+<div class="home-hero">
+  <div class="heroContainer home-hero1">
+    <div class="home-container01">
+      <h1 class="heading1"> G.M. TRADERS  </h1>
+      <h1 class="heading1"> Your Source of Quality Bags for Clothing</h1>
+      <span class="home-hero-sub-heading bodyLarge">
+        <span>
+          
+            <span> Leading Manufacturer and Supplier of Plastic Bags </span>
+
+        </span>
+      </span>
+      <div class="home-btn-group">
+        <button class="buttonFilled">Explore Our Products</button>
+        <button class="buttonFlat">Learn More&nbsp;→</button>
+      </div>
+    </div>
+  </div>
+</div>
+--}}
 
 
-</head>
-<body>
-<a href="http://" target="_blank" rel="noopener noreferrer">
 <div id="card">
-</div></a>
-<h1>G.M. TRADERS</h1>
-<h2>Your Source of Quality Bags for Clothing</h2>
-
+</div>
+<h1>HELLO</h1>
 <div id="circle"></div>
 <div id="rect"></div>
 
-
-  
-</body>
-</html>
+@endsection
